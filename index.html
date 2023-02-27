@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Styles/index.css">
+    <title>Disboard</title>
+</head>
+
+<body>
+    <div class="card">
+        <div>
+            <h1>Lista de Animes</h1>
+        </div>
+        <div class="form_container">
+            <div class="form">
+                <div class="container_input">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Email">
+                </div>
+                <div class="container_input">
+                    <label for="senha">Senha</label>
+                    <input id="senha" name="senha" type="password" placeholder="Senha">
+                </div>
+                <div class="container_checkbox">
+                    <input type="checkbox">
+                    <p>Lembre-me</p>
+                </div>
+
+                <button onclick="register()">Entrar</button>
+                <div class="container_a">
+                    <a href="#">Esqueci minha senha</a>
+                    <a href="#">Não tenho conta</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
+<script src="./Javascript/index.js"></script>
+</html>
