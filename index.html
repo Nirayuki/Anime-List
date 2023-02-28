@@ -14,7 +14,7 @@
         <div>
             <h1>Lista de Animes</h1>
         </div>
-        <div class="form_container">
+        <div id="form" class="form_container">
             <div class="form">
                 <div class="container_input">
                     <label for="email">Email</label>
@@ -29,11 +29,33 @@
                     <p>Lembre-me</p>
                 </div>
 
-                <button onclick="register()">Entrar</button>
+                <button onclick="signIn()">Entrar</button>
                 <div class="container_a">
                     <a href="#">Esqueci minha senha</a>
-                    <a href="#">Não tenho conta</a>
+                    <p onclick="login()">Não tenho conta</p>
                 </div>
+            </div>
+        </div>
+        <div id="register" class="register_container">
+            <div class="container_input">
+                <label for="username">Username</label>
+                <input id="username" name="useranme" type="text" placeholder="Useraname">
+            </div>
+            <div class="container_input">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="Email">
+            </div>
+            <div class="container_input">
+                <label for="senha">Senha</label>
+                <input id="senha" name="senha" type="password" placeholder="Senha">
+            </div>
+            <div class="container_input">
+                <label for="repetirSenha">Repetir Senha</label>
+                <input id="repetirSenha" name="repetirSenha" type="password" placeholder="Repetir Senha">
+            </div>
+            <div class="container_a">
+                <button onclick="register()">Registrar-se</button>
+                <button onclick="backLogin()">Voltar</button>
             </div>
         </div>
     </div>

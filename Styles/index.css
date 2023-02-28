@@ -113,6 +113,15 @@ label{
     padding: 10px 0 10px 0;
 }
 
+.container_a p{
+    color: blue;
+    cursor: pointer;
+}
+
+.container_a p:hover{
+    opacity: 0.7;
+}
+
 .container_a{
     display: flex;
     justify-content: space-between;
@@ -124,4 +133,19 @@ label{
 
 .container_a a:hover{
     opacity: 0.7;
+}
+
+
+.register_container{
+    display: none;
+
+    width: 450px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register_container button{
+    width: 150px;
 }

@@ -1,3 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     margin: 0;
+}
+
+body{
+    font-family: 'Rubik', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 7vh;
+
+    position: absolute;
+
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+}
+
+
+.header_container{
+    max-width: 1600px;
+    height: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_start{
+    width: 700px;
+
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+
+    width: 150px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #000;
+}
+
+nav a:hover{
+    opacity: 0.7;
+}
+
+.nav_end{
+
+    width: 150px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.nav_end button:hover{
+    opacity: 0.7;
+}
+
+.fa-right-from-bracket{
+    cursor: pointer;
+}
+
+.fa-right-from-bracket:hover{
+    opacity: 0.7;
+}
+
+header img{
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+}
+
+header img:hover{
+    opacity: 0.7;
+}
+
+.logo{
+    font-size: 30px;
+    color: darkslateblue;
+    padding-left: 50px;
 }
