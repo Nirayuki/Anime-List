@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/dashboard.css">
+    <link rel="stylesheet" href="../Styles/header.css">
     <script src="https://kit.fontawesome.com/f562eedd4b.js" crossorigin="anonymous"></script>
     <title>Dashboard</title>
 </head>
@@ -22,14 +23,30 @@
             </div>
             <div class="nav_end">
                 <a href="./perfil.html" style="display: flex; align-items: end;"><img src="../Assets/user_avatar.png"></a>
-                <span>
+                <span style="color: #53595f">
                     <i class="fa-solid fa-right-from-bracket fa-xl" onclick="signOut()"></i>
                 </span>
             </div>
+            <div id="hamburguer" onclick="toggle()" class="hamburguer">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <div id="nav_list_mobile" class="nav_list_mobile">
+                <a href="./dashboard.html">Inicio</a>
+                <a href="./perfil.html">Perfil</a>
+                <a href="./animes.html">Animes</a>
+                <p href="#" onclick="signOut()">Logout</p>
+            </div>
         </div>
     </header>
-    <div>OI</div>
+    <main>
+        <section class="animes_new">
+            
+        </section>
+    </main>
 </body>
 <script src="../javascript/dashboard.js"></script>
+<script src="../javascript/header.js"></script>
 
 </html>

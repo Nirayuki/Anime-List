@@ -14,6 +14,17 @@ const auth = firebaseApp.auth();
 
 const user = "";
 
+document.getElementById('senha').addEventListener("keypress", function(event){
+   if(event.key === 'Enter'){
+        event.preventDefault();
+        signIn();
+    }
+})
+
+document.getElementById('btn_entrar').onkeydown = function(e){
+    console.log(e.code);
+}
+
 if(localStorage.getItem('uid') == null){
     if(!location.href === 'http://127.0.0.1:5500/'){
         window.location.replace('../index.html');
