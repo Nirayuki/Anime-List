@@ -51,7 +51,6 @@ nav a:hover{
     align-items: center;
     justify-content: space-around;
 
-    padding-right: 30px;
 }
 
 
@@ -100,6 +99,12 @@ header img:hover{
     display: none;
 }
 
+
+@media screen and (max-width: 1600px) {
+    .nav_end{
+        padding-right: 30px;
+    }
+}
 
 @media screen and (max-width: 950px) {
 
