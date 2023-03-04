@@ -4,8 +4,10 @@
 }
 
 body{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Rubik', sans-serif;    
+    text-decoration: none;
 }
+
 
 .preloader{
     position: fixed;
@@ -52,15 +54,63 @@ body{
 }
 }
 
-
 main{
-    width: 100%;
+    max-width: 1600px;
 
-    padding-top: 100px;
+    display: flex;
+
+    align-items: center;
+
+    margin: 100px auto;
+    
+
+    position: relative;
 }
 
-section.animes_new{
+.side_navigator{
+    position: absolute;
+
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    border-right: solid 4px darkslateblue;
+
+    padding-top: 5px;
+    padding-right: 30px;
+
+    gap: 30px;
+
+    height: 20vh;
+}
+
+.side_navigator a{
+    cursor: pointer;
+    font-size: 20px;
+
+    text-decoration: none;
+    color: black;
+}
+
+.side_navigator a:hover{
+    opacity: 0.7;
+}
+
+.page_animes{
     width: 100%;
 
-    background-color: darkslateblue;
+}
+
+.page_animes p{
+    font-size: 40px;
+    width: 100%;
+
+    margin-bottom: 40px;
+
+    padding-left: 250px;
+}
+
+.page_animes span{
+    color: darkslateblue;
 }

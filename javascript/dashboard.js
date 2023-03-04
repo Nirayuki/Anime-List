@@ -5,8 +5,3 @@ if(localStorage.getItem('uid') == null){
     }
 }
 
-const signOut = () => {
-    console.log("caindo aqui");
-    localStorage.removeItem('uid');
-    window.location.replace('../index.html');
-}

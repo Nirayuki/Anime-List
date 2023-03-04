@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="ptBR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/header.css">
-    <link rel="stylesheet" href="../Styles/perfil.css">
+    <link rel="stylesheet" href="../Styles/animes.css">
     <script src="https://kit.fontawesome.com/f562eedd4b.js" crossorigin="anonymous"></script>
     <title>Lista de Animes</title>
 </head>
+
 <body>
     <div id="preloader" class="preloader">
         <p>Carregando...</p>
@@ -24,7 +26,8 @@
                 </nav>
             </div>
             <div class="nav_end">
-                <a href="./perfil.html" style="display: flex; align-items: end;"><img id="photoURL" src="../Assets/user_avatar.png"></a>
+                <a href="./perfil.html" style="display: flex; align-items: end;"><img id="photoURL"
+                        src="../Assets/user_avatar.png"></a>
                 <span style="color: #53595f">
                     <i class="fa-solid fa-right-from-bracket fa-xl" onclick="signOut()"></i>
                 </span>
@@ -37,7 +40,7 @@
             <div id="nav_list_mobile" class="nav_list_mobile">
                 <a href="./dashboard.html">Inicio</a>
                 <a href="./perfil.html">Perfil</a>
-                <a href="./animes.html">Animes</a>
+                <a href="./meusanimes.html">Animes</a>
                 <p onclick="signOut()">Logout</p>
             </div>
         </div>
@@ -45,34 +48,12 @@
 
     <main>
         <div class="side_navigator">
-            <a href="./perfil.html" style="color: darkslateblue;">Perfil</a>
-            <a href="./meusanimes.html">Meus animes</a>
+            <a href="./perfil.html">Perfil</a>
+            <a href="./animes.html" style="color: darkslateblue;">Meus animes</a>
             <a href="./configuracoes.html">Configurações</a>
         </div>
-        <div id="page_perfil" class="page_perfil">
-            <div class="left">
-                <p><span># </span>Perfil</p>
-                <div class="perfil_edit">
-                    <div class="container_input">
-                        <label>Username</label>
-                        <input id="username" type="text" placeholder="Username">
-                            
-                    </div>
-                    <div class="container_input">
-                        <label>Data de Nascimento</label>
-                        <input id="nascimento" type="date">
-                    </div>
-                    <div class="container_input">
-                        <label>Email</label>
-                        <input id="email" type="email" placeholder="Email">
-                    </div>
-                    <button>Salvar</button>
-                </div>
-            </div>
-            <div class="right">
-                <img id="photo" src="../Assets/user_avatar.png">
-                <button><i class="fa-solid fa-pen"></i> Editar</button>
-            </div>
+        <div class="page_animes">
+            <p><span># </span>Meus Animes</p>
         </div>
     </main>
 </body>
