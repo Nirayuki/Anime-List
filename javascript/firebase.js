@@ -83,6 +83,9 @@ async function getData(){
             }
             data.photo !== null ? document.getElementById('photoURL').setAttribute('src', data.photo) : null
             document.getElementById('preloader').style.visibility = "hidden";
+
+
+          
         } else {
             // doc.data() will be undefined in this case
             console.log("No such document!");

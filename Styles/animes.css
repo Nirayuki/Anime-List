@@ -111,6 +111,38 @@ main{
     padding-left: 250px;
 }
 
+.card{
+    max-width: 1600px;
+}
+
 .page_animes span{
     color: darkslateblue;
+}
+
+
+.titulo_anime p{
+    font-size: 30px;
+
+    color: darkslateblue;
+
+    width: 100%;
+}
+
+.descricao{
+    font-size: 15px;
+}
+
+.container_side{
+    display: flex;
+    width: 100%;
+    gap: 30;
+
+    background-color: aquamarine;
+
+    padding: 10px;
+}
+
+.container_side img{
+    width: 284px;
+    height: 402px;
 }
