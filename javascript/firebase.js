@@ -12,6 +12,46 @@ const db = firebaseApp.firestore();
 const auth = firebaseApp.auth();
 
 
+window.addEventListener("load", (e) => {
+
+    console.log("Terminou de carregar tudo")
+})
+
+
+document.body.addEventListener("load", (e) => {
+    console.log("body")
+})
+
+let uid = localStorage.getItem("uid");
+var data = {};
+
+var docRefHeader = db.collection("users").doc(uid);
+
+docRefHeader.get()
+.then((doc) => {
+    if (doc.exists) {
+        data = doc.data();
+        console.log(data);
+        if (window.location.pathname === "/pages/perfil.html") {
+            data.photo !== null ? document.getElementById('photo').setAttribute('src', data.photo) : null
+            document.getElementById('username').value = data.name;
+        }
+        data.photo !== null ? document.getElementById('photoURL').setAttribute('src', data.photo) : null
+
+
+
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+})
+    .finally(() => {
+        document.getElementById('preloader').style.display = "none";
+});
+
+
 // ----------------------------------------------------------------- INDEX ------------------------------------------------------------------------
 
 const register = () => {
@@ -64,42 +104,9 @@ const signOut = () => {
     window.location.replace('../index.html');
 }
 
-console.log(window.location)
 // ----------------------------------------------------------------- HEADER ------------------------------------------------------------------------
 
-let uid = localStorage.getItem("uid");
-var data = {};
 
-var docRefHeader = db.collection("users").doc(uid);
-
-async function getData(){
-    await docRefHeader.get().then((doc) => {
-        if (doc.exists) {
-            data = doc.data();
-            console.log(data);
-            if(window.location.pathname === "/pages/perfil.html"){
-               data.photo !== null ? document.getElementById('photo').setAttribute('src', data.photo) : null
-                document.getElementById('username').value = data.name;
-            }
-            data.photo !== null ? document.getElementById('photoURL').setAttribute('src', data.photo) : null
-            document.getElementById('preloader').style.visibility = "hidden";
-
-
-          
-        } else {
-            // doc.data() will be undefined in this case
-            console.log("No such document!");
-        }
-    }).catch((error) => {
-        console.log("Error getting document:", error);
-    });
-}
-
-getData();
-
-if (data !== null) {
-    console.log(data.photo);
-}
 
 
 // ----------------------------------------------------------------- PERFIL ------------------------------------------------------------------------
